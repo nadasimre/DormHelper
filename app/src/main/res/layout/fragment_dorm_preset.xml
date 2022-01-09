@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="DormPresetViewModel"
+            type="com.example.dormhelper.screens.dormpresetbuilder.DormPresetViewModel"/>
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".screens.dormpresetbuilder.DormPresetFragment"
+            android:background="@color/black">
+
+            <View
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/gradient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="90dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/sizeQuestion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/Size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="151dp"
+                android:ems="10"
+                android:text="@={DormPresetViewModel.size}"
+                android:fontFamily="@font/roboto_light"
+                android:hint="@string/square_meter"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:importantForAutofill="no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size" />
+
+            <TextView
+                android:id="@+id/roomCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:importantForAutofill="no"
+                android:text="@string/roomsQuestion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Size" />
+
+            <EditText
+                android:id="@+id/RoomCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="151dp"
+                android:ems="10"
+                android:text="@={DormPresetViewModel.roomCount}"
+                android:fontFamily="@font/roboto_light"
+                android:hint="@string/rooms"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/roomCount" />
+
+            <Button
+                android:id="@+id/CreateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="607dp"
+                android:layout_marginEnd="300dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_light"
+                android:onClick="@{() -> DormPresetViewModel.onCreateClicked()}"
+                android:text="@string/create"
+                android:textColor="@color/purple_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+            <Button
+                android:id="@+id/Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="607dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_light"
+                android:onClick="@{() -> DormPresetViewModel.cancelClicked()}"
+                android:text="@string/cancelButton"
+                android:textColor="@color/teal_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+            <CheckBox
+                android:id="@+id/hasBathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:checked="@={DormPresetViewModel.hasBathroom}"
+                android:fontFamily="@font/roboto_thin"
+                android:text="@string/bathroomQuestion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RoomCount" />
+
+            <CheckBox
+                android:id="@+id/hasSink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:checked="@={DormPresetViewModel.hasSink}"
+                android:fontFamily="@font/roboto_thin"
+                android:text="@string/sinkQuestion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hasBathroom" />
+
+            <CheckBox
+                android:id="@+id/hasKitchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:checked="@={DormPresetViewModel.hasKitchen}"
+                android:fontFamily="@font/roboto_thin"
+                android:text="@string/kitchenQuestion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hasSink" />
+
+            <CheckBox
+                android:id="@+id/isFurnished"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:checked="@={DormPresetViewModel.isFurnished}"
+                android:fontFamily="@font/roboto_thin"
+                android:text="@string/furnitureQuestion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hasKitchen" />
+
+            <EditText
+                android:id="@+id/presetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="@string/presetNameHint"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:importantForAutofill="no"
+                android:text="@={DormPresetViewModel.presetName}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/isFurnished"/>
+
+            <TextView
+                android:id="@+id/error"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="205dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="206dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@={DormPresetViewModel.error}"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

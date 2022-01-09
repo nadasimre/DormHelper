@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="android.text.TextUtils"/>
+        <variable
+            name="PresetDetailViewModel"
+            type="com.example.dormhelper.screens.dormpresetdetail.PresetDetailViewModel"/>
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.dormpresetdetail.PresetDetailFragment"
+        android:background="@color/black">
+
+        <View
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/dormImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/dormImage"
+            android:src="@drawable/icon"
+            app:dormImage="@{PresetDetailViewModel.DormPreset}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <TextView
+            android:id="@+id/nameOfDetailedPreset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@{@string/detailName(PresetDetailViewModel.presetName)}"
+            android:textColor="@color/purple_200"
+            app:layout_constraintStart_toEndOf="@+id/dormImage"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+        <TextView
+            android:id="@+id/sizeOfDetailedPreset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@{@string/detailSize(PresetDetailViewModel.presetSize)}"
+            android:textColor="@color/purple_200"
+            app:layout_constraintStart_toEndOf="@+id/dormImage"
+            app:layout_constraintTop_toBottomOf="@+id/nameOfDetailedPreset" />
+
+        <TextView
+            android:id="@+id/roomCountOfDetailedPreset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@{@string/detailRooms(PresetDetailViewModel.presetRooms)}"
+            android:textColor="@color/purple_200"
+            app:layout_constraintStart_toEndOf="@+id/dormImage"
+            app:layout_constraintTop_toBottomOf="@+id/sizeOfDetailedPreset" />
+
+        <ImageView
+            android:id="@+id/presetHasBathroom"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/bathroom"
+            android:visibility="@{PresetDetailViewModel.bathroomVisibility ? View.VISIBLE : View.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dormImage"
+            android:contentDescription="@string/doesItHaveBathroom" />
+
+        <ImageView
+            android:id="@+id/presetHasSink"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="70dp"
+            android:contentDescription="@string/doesItHaveSink"
+            android:src="@drawable/sink"
+            android:visibility="@{PresetDetailViewModel.sinkVisibility ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomCountOfDetailedPreset" />
+
+        <ImageView
+            android:id="@+id/presetHasKitchen"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="70dp"
+            android:contentDescription="@string/doesItHaveKitchen"
+            android:src="@drawable/kitchen"
+            android:visibility="@{PresetDetailViewModel.kitchenVisibility ? View.VISIBLE : View.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/presetHasBathroom" />
+
+        <ImageView
+            android:id="@+id/presetIsFurnished"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="70dp"
+            android:contentDescription="@string/doesItHaveFurnitures"
+            android:src="@drawable/furnitures"
+            android:visibility="@{PresetDetailViewModel.furnitureVisibility ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/presetHasSink" />
+
+        <Button
+            android:id="@+id/deletePreset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="553dp"
+            android:layout_marginEnd="159dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_light"
+            android:onClick="@{() -> PresetDetailViewModel.onDelete()}"
+            android:text="@string/delete_preset"
+            android:textColor="@color/magenta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

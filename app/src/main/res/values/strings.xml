@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Dorm Helper</string>
+
+    <!--Login Screen-->
+    <string name="login">LOGIN</string>
+    <string name="registration">New user? Click here to register</string>
+    <string name="passwordHint">password</string>
+    <string name="usernameHint">username</string>
+    <string name="loginButton">login</string>
+    <string name="cancelButton">cancel</string>
+    <string name="decoration">decoration</string>
+
+    <!--Registration Screen-->
+    <string name="registration_title">REGISTRATION</string>
+    <string name="registerButton">Register</string>
+    <string name="emailHint">email</string>
+
+    <!--Menu Screen-->
+    <string name="loggedInName">Name: %s</string>
+    <string name="loggedInEmail">Email: %s</string>
+    <string name="manage">Manage User Profile</string>
+    <string name="Dorms">Dorms</string>
+    <string name="manageUser">manageUserButton</string>
+    <string name="add_preset">Add Preset</string>
+    <string name="headerText">Your Dorm Presets:</string>
+    <string name="clear_presets">Clear presets</string>
+
+    <!--NavDrawer Screen-->
+    <string name="about_text">\nThe Dorm Helper application is able to store multiple users, and these users can have multiple dorm layouts, or presets.
+        \n\nIf you registered successfully and have an account, then you can log into the app with the correct username and password.
+        \n\nIn the app you can delete the account or update all the information.
+        \n\nYou can add the dorm presets, and delete them(one by one, or all of them at the same time).
+        \n\nYou can connect to a web service and see all the dorms in Kortrijk, and their information as well.\n</string>
+    <string name="about">About</string>
+    <string name="aboutImage">About Image</string>
+    <string name="image_of_navigation_header">image of navigation header</string>
+
+    <!--Manage User Screen-->
+    <string name="new_name">New Name</string>
+    <string name="new_password">New Password</string>
+    <string name="new_email">New Email</string>
+    <string name="change">Change</string>
+    <string name="delete_user">Delete User</string>
+
+    <!--Add New Preset Screen-->
+    <string name="sizeQuestion">What size do you want it to be?</string>
+    <string name="roomsQuestion">How many rooms do you want?</string>
+    <string name="square_meter">square meter</string>
+    <string name="rooms">e.g., 2</string>
+    <string name="bathroomQuestion">Do you want an own bathroom?</string>
+    <string name="sinkQuestion">Do you want an own sink?</string>
+    <string name="kitchenQuestion">Do you want an own kitchen?</string>
+    <string name="furnitureQuestion">Do you want it to be furnished?</string>
+    <string name="create">Create</string>
+    <string name="presetNameHint">name this new preset</string>
+
+    <!--Preset Detail Screen-->
+    <string name="dormImage">imageOfDorm</string>
+    <string name="delete_preset">Delete Preset</string>
+    <string name="doesItHaveBathroom">DoesItHaveABathroom?</string>
+    <string name="doesItHaveSink">DoesItHaveASink?</string>
+    <string name="doesItHaveKitchen">DoesItHaveAKitchen?</string>
+    <string name="doesItHaveFurnitures">IsItFurnished?</string>
+    <string name="detailName">Name: %s</string>
+    <string name="detailSize">Size: %s square meter(s)</string>
+    <string name="detailRooms">It has %s room(s)</string>
+
+    <!--Delete Dialog-->
+    <string name="dialog_confirm_delete">Delete all presets?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <!--Network-->
+    <string name="status_of_connection">Status of connection</string>
+
+    <!--Network Detail-->
+    <string name="networkRooms">This dorm has still %s room(s) available.</string>
+    <string name="further_information">Further information</string>
+    <string name="city">City: %s</string>
+    <string name="street">Street: %s</string>
+    <string name="bisnr">Bisnr.: %s</string>
+    <string name="busnr">Busnr.: %s</string>
+    <string name="kadAfd">KAD.AFD.: %s</string>
+    <string name="kadSectie">KAD.SECTIE.: %s</string>
+    <string name="kadNr">KAD.NR.: %s</string>
+
+</resources>
