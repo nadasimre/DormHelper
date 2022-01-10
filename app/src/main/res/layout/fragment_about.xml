@@ -44,6 +44,7 @@
             android:fontFamily="@font/roboto_light"
             android:text="@string/about_text"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/aboutImage" />

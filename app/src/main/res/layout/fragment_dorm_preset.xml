@@ -37,6 +37,7 @@
                 android:layout_marginTop="90dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/sizeQuestion"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,12 +49,14 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="151dp"
                 android:ems="10"
-                android:text="@={DormPresetViewModel.size}"
                 android:fontFamily="@font/roboto_light"
                 android:hint="@string/square_meter"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:minHeight="48dp"
-                android:importantForAutofill="no"
+                android:text="@={DormPresetViewModel.size}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/size" />
@@ -67,6 +70,7 @@
                 android:fontFamily="@font/roboto_bold"
                 android:importantForAutofill="no"
                 android:text="@string/roomsQuestion"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Size" />
 
@@ -78,12 +82,14 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="151dp"
                 android:ems="10"
-                android:text="@={DormPresetViewModel.roomCount}"
                 android:fontFamily="@font/roboto_light"
                 android:hint="@string/rooms"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:minHeight="48dp"
+                android:text="@={DormPresetViewModel.roomCount}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/roomCount" />
@@ -127,6 +133,7 @@
                 android:checked="@={DormPresetViewModel.hasBathroom}"
                 android:fontFamily="@font/roboto_thin"
                 android:text="@string/bathroomQuestion"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/RoomCount" />
 
@@ -139,6 +146,7 @@
                 android:checked="@={DormPresetViewModel.hasSink}"
                 android:fontFamily="@font/roboto_thin"
                 android:text="@string/sinkQuestion"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/hasBathroom" />
 
@@ -151,6 +159,7 @@
                 android:checked="@={DormPresetViewModel.hasKitchen}"
                 android:fontFamily="@font/roboto_thin"
                 android:text="@string/kitchenQuestion"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/hasSink" />
 
@@ -163,6 +172,7 @@
                 android:checked="@={DormPresetViewModel.isFurnished}"
                 android:fontFamily="@font/roboto_thin"
                 android:text="@string/furnitureQuestion"
+                android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/hasKitchen" />
 
@@ -173,13 +183,16 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:ems="10"
+                android:fontFamily="@font/roboto_light"
                 android:hint="@string/presetNameHint"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:importantForAutofill="no"
                 android:text="@={DormPresetViewModel.presetName}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/isFurnished"/>
+                app:layout_constraintTop_toBottomOf="@+id/isFurnished" />
 
             <TextView
                 android:id="@+id/error"
