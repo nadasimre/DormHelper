@@ -4,7 +4,7 @@
 
 ### Login screen
 Username and Password text: you need to type these in, if you leave them empty, or if they are not correct, an error message will show accordingly
-/nLogin button: After you type in the correct username and password pair, you will be redirected to the main menu
+Login button: After you type in the correct username and password pair, you will be redirected to the main menu
 Cancel button: The username and/or the password you typed in will be cleared
 New user? Click here to register button: This will redirect you to the registration screen
 
