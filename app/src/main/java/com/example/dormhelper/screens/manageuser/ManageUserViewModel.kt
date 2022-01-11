@@ -25,15 +25,25 @@ class ManageUserViewModel(private var loggedInUser: User, val database: UserData
             error.value="username field is empty"
         }else{
             viewModelScope.launch {
-                val dorms = database.getUsersDorms(loggedInUser.userName)
-                for(item in dorms){
-                    item.nameOfUser = username.value!!
-                    database.updateDorm(item)
+                val users = database.getAllUsers()
+                for (item in users) {
+                    if (item.userName == username.value) {
+                        error.value = "Username taken"
+                    } else {
+                        error.value = ""
+                    }
                 }
+                if(error.value.isNullOrBlank()){
+                    val dorms = database.getUsersDorms(loggedInUser.userName)
+                    for (item in dorms) {
+                        item.nameOfUser = username.value!!
+                        database.updateDorm(item)
+                    }
 
-                loggedInUser.userName = username.value!!
-                error.value = "successful username change"
-                database.update(loggedInUser)
+                    loggedInUser.userName = username.value!!
+                    error.value = "successful username change"
+                    database.update(loggedInUser)
+                }
             }
         }
     }
@@ -55,9 +65,19 @@ class ManageUserViewModel(private var loggedInUser: User, val database: UserData
             error.value="email field is empty"
         }else{
             viewModelScope.launch {
-                loggedInUser.email = email.value!!
-                error.value = "successful email change"
-                database.update(loggedInUser)
+                val users = database.getAllUsers()
+                for (item in users) {
+                    if (item.email == email.value) {
+                        error.value = "Email taken"
+                    } else {
+                        error.value = ""
+                    }
+                }
+                if(error.value.isNullOrBlank()) {
+                    loggedInUser.email = email.value!!
+                    error.value = "successful email change"
+                    database.update(loggedInUser)
+                }
             }
         }
     }
