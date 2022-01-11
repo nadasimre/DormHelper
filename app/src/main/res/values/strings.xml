@@ -6,8 +6,8 @@
     <string name="registration">New user? Click here to register</string>
     <string name="passwordHint">password</string>
     <string name="usernameHint">username</string>
-    <string name="loginButton">login</string>
-    <string name="cancelButton">cancel</string>
+    <string name="loginButton">Login</string>
+    <string name="cancelButton">Cancel</string>
     <string name="decoration">decoration</string>
 
     <!--Registration Screen-->

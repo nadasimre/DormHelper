@@ -160,7 +160,8 @@
             app:layout_constraintBottom_toTopOf="@+id/view2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/dorm_helper" />
+            app:srcCompat="@drawable/dorm_helper"
+            android:contentDescription="@string/decoration" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
