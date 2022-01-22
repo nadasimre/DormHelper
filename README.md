@@ -2,6 +2,8 @@
 
 ## User guide
 
+(disclaimer: the app is not really useful in itself, it just shows some functionalities and techiques I learned to implement during class)
+
 ### Login screen
 Username and Password text: you need to type these in, if you leave them empty, or if they are not correct, an error message will show accordingly,
 Login button: After you type in the correct username and password pair, you will be redirected to the main menu,
