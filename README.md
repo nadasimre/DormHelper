@@ -28,16 +28,16 @@ Here you can add the presets you want. First you need to enter all the data (How
 Here you can see all the information about the dorm preset you tapped, it's picture will be according to the number of rooms (or if you exited the Add Dorm Preset screen with the backbutton), it will show what is the name, how many rooms it has and how big it is. It will show icons according to the checkboyes of the Add Dorm Preset screen. It has a Delete Preset button, with this you can delete this preset and be redirected to the Main Menu.
 
 ### NawDrawer
-There is a hamburger menu at the Login screen, but it can be accessed from anywhere(aside from the network screens) if you swipe right from the left side of the screen
+There is a hamburger menu at the Login screen, but it can be accessed from anywhere (aside from the network screens) if you swipe right from the left side of the screen.
 
 ### About screen
-It can be accessed trough the NawDrawer, it has a short description about the app
+It can be accessed through the NawDrawer, it has a short description about the app.
 
 ### Options Menu
-It can be accessed from the Main Menu
+It can be accessed from the Main Menu.
 
 ### Network screen
-It can be accessed from the Options Menu of the Main Menu, it has a RecyclerView, with list items about the Dorms I access trough the web service, these are clickable
+It can be accessed from the Options Menu of the Main Menu, it has a RecyclerView, with list items about the Dorms I access trough the web service, these are clickable.
 
 ### Network Detail screen
-It can be accessed trough the Network screen, It has all the information that can be accessed from the web service
+It can be accessed trough the Network screen, It has all the information that can be accessed from the web service.
